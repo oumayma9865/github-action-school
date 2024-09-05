@@ -53,6 +53,6 @@ jobs:
   Push:
    runs-on: ubuntu-latest
    if: ${{ inputs.dry-run }}
-      steps:
+   steps:
       - name: Push to Dockerhub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/github-action-school
