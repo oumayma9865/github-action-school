@@ -52,6 +52,7 @@ jobs:
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/github-action-school .
   Push:
    runs-on: ubuntu-latest
+   needs: build
    if: ${{ !inputs.dry-run }}
    steps:
       - name: Push to Dockerhub
